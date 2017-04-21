@@ -12,10 +12,27 @@ innerContainer2.style.visibility = "hidden";
 shadowBox.style.visibility = "hidden";
 
 
+
+
+//----------------------------------- FUNCTIONS -----------------------------------
+
+
+//kui inimene kaks korda shadowile vajutab, siis sulgeb ekraani ja lükkab küsimused algusesse
+//pole kindel, et kas see on kõige parem funktsionaalsus, võibolla võiks lihtsalt mingi alertboxi tekitada selle jaoks
+document.addEventListener("dblclick", function(e){
+	var click = e.target.id;
+	if(click == "shadowBox"){
+		innerContainer1.style.visibility = "visible";
+		innerContainer2.style.visibility = "hidden";
+		shadowBox.style.visibility = "hidden";
+	}
+});
+
 //kuulan mouse clicki ja kui == button id, siis funktsioon tegutseb järgmiselt
 document.addEventListener("click", function(e) {
 	var click = e.target.id;
 	console.log(click);
+	
 	//kontrollib, mis buttoniga on tegu ja tegutseb sellele vastavalt
 	switch(click) {
 		case "mainBtn": 
