@@ -18,29 +18,41 @@
 	</div>
 	
 	
-	<!--Siia divi sisse läheb pealehel scrollides esimese vaate sisu-->
-	<div class="mainView1 sect">
-		<div class="mainContainer">
+	<!--Siia divi sisse läheb pealehel scrollides esimese vaate sisu. Siin sees on kõik, mida inimene kohe lehele tulles näeb-->
+	<div id="mainView" class="mainView1 sect">
+		<div id="mainContainer" class="mainContainer">
 		
 			<!--Container, mida on kohe alguses lehe keskel näha-->
 			<div id="innerContainer1" class="innerContainer1">
+				
 				<h1 id="" class="welcomeText">Tere tulemast,</h1>
 				<h2 class="btnIntro" value="Siia" name="asd">Alustamiseks vajuta siia</h2>
 				<button id="mainBtn" class="mainBtn myButton" >Alusta</button>
+			
 			</div>
+			
+			
 			
 			<!--Container, mida on peale "Alusta" nuppu vajutamist näha-->
 			<div id="innerContainer2" class="innerContainer2">
-				<!--Content div-->
+				
+				<!--Content div, kuhu sisse tulevad küsimused, mida kasutajalt küsida-->
 				<div id="contentDiv" class="contentDiv">
 					<p>MINGID ESIMESED KÜSIMUSED MIDA ME KASUTAJALT KÜSIME ENNE KAARDI KASUTAMIST VAADE1</p>
 				</div>
-				<button id="nextBtn1" class="nextBtn1 myButton" >Järgmine</button>
+				
+				<!-- [button] küsimuste all, millega kasutaja edasi liigub-->
+				<button id="nextBtn1" class="nextBtn1 myButton" >Edasi</button>
+				<button id="backBtn1" class="backBtn1 myButton" >Tagasi</button>
+				
 			</div>
-			
-			
 		
 		</div>
+		
+		
+		<!--shadow, mis ilmub ekraanile, siis kui "alusta" nuppu vajutada-->
+		<div id="shadowBox"></div>
+		
 	</div>
 	
 	

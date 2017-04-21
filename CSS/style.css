@@ -36,19 +36,18 @@ html, body {
 
 .nextBtn1 {
 	position: absolute; 
-	bottom: 15px;
-	width: 400px;
-	height: 50px;
-	left: 50%;
-	margin-left: -200px;
+	bottom: 7px;
+	width: 170px;
+	height: 40px;
+	right: 7px;
+	
 }
-.nextBtn2 {
+.backBtn1 {
 	position: absolute; 
-	bottom: 15px;
-	width: 400px;
-	height: 50px;
-	left: 50%;
-	margin-left: -200px;
+	bottom: 7px;
+	width: 170px;
+	height: 40px;
+	left: 7px;
 }
 
 
@@ -68,6 +67,7 @@ html, body {
 	left: 50%;
 	margin-left: -300px;
 	border-radius: 10px;
+	z-index: 98;
 	/*border: 3px solid yellow;*/
 }
 .innerContainer1 {
@@ -80,6 +80,7 @@ html, body {
 	height: 200px;
 	border: 0px solid gray;
 	border-radius: 10px;
+	z-index: 99;
 	background-color: rgba(255,255,255,.8);/*#fafafa;*/
 	-webkit-box-shadow: 3px 0px 28px 0px rgba(0,0,0,0.75);
 	-moz-box-shadow: 3px 0px 28px 0px rgba(0,0,0,0.75);
@@ -91,6 +92,7 @@ html, body {
 	height: 100%;
 	background-color: #fafafa;
 	border-radius: 10px;
+	z-index: 99;
 	-webkit-box-shadow: 3px 0px 28px 0px rgba(0,0,0,0.75);
 	-moz-box-shadow: 3px 0px 28px 0px rgba(0,0,0,0.75);
 	box-shadow: 3px 0px 28px 0px rgba(0,0,0,0.75);
@@ -100,6 +102,14 @@ html, body {
 	text-align: center;
 }
 
+/*shadow overlay, mis tekib, kui inimene alustab küsimustele vastamist*/
+#shadowBox {
+	position: fixed;
+	width: 100%;
+	height: 100%;
+	background-color: rgba(0,0,0,.4);
+	z-index: 10;
+}
 
 /*------------------------VIEWS START------------------------*/
 .mainView1 {
@@ -137,7 +147,7 @@ html, body {
 
 .mainView4 {
 	width: 100%;
-	height: 40%;
+	height: 30%;
 	position: absolute;
 	top: 325%;
 	background-color: #424242;
@@ -174,7 +184,7 @@ html, body {
 
 
 
-
+/*PRAEGUNE BUTTON DESIGN, AJUTINE!*/
 .myButton {
 	-moz-box-shadow:inset 0px 1px 0px 0px #d9fbbe;
 	-webkit-box-shadow:inset 0px 1px 0px 0px #d9fbbe;
