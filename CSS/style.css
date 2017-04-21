@@ -117,14 +117,16 @@ html, body {
 .mainView1 {
 	width: 100vw;
 	height: 120vh;
-	background-color: red;
 	/*border: 5px solid red;*/
 	background-image: url("../Resources/city2.jpg");
 	background-size: cover;                
 	background-repeat: no-repeat;
 	background-position: center center;
 	background-attachment: fixed;
+	/*taustapildi vahetamise animatsioon*/
+	animation: changeBackground 50s infinite; 
 }
+
 
 .mainView2 {
 	width: 100vw;
@@ -171,7 +173,21 @@ html, body {
 
 
 
+/*---------------------- ANIMATSIOONID START----------------------*/
 
+/*animatsioon, mis vahetab backgroundi iga natukese aja tagant, aegu peab muutma veel, olenevalt taustapiltide arvust*/
+@keyframes changeBackground {
+	0% {background-image: url("../Resources/city2.jpg");}
+	20% {background-image: url("../Resources/city2.jpg");}
+	25% {background-image: url("../Resources/city3.jpg");}
+	45% {background-image: url("../Resources/city3.jpg");}
+	50% {background-image: url("../Resources/city4.jpg");}
+	70% {background-image: url("../Resources/city4.jpg");}
+	75% {background-image: url("../Resources/city2.jpg");}
+	100% {background-image: url("../Resources/city2.jpg");}
+}
+
+/*---------------------- ANIMATSIOONID END----------------------*/
 
 
 
