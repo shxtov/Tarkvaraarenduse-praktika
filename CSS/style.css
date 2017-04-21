@@ -3,6 +3,7 @@ html, body {
 	height: 100%;
 	width: 100%;
 }
+
 .langBar {
 	position: absolute;
 	top: 20px;
@@ -24,6 +25,7 @@ html, body {
 	font-family: Arial, Helvetica, sans-serif;
 	width: 100%;
 }
+
 /*BUTTONS*/
 .mainBtn {
 	position: absolute;
@@ -50,7 +52,6 @@ html, body {
 	left: 7px;
 }
 
-
 .btnIntro {
 	margin-top: 30px;
 	margin-bottom: 5px;
@@ -70,6 +71,7 @@ html, body {
 	z-index: 98;
 	/*border: 3px solid yellow;*/
 }
+
 .innerContainer1 {
 	position: absolute;
 	top: 50%;
@@ -113,8 +115,9 @@ html, body {
 
 /*------------------------VIEWS START------------------------*/
 .mainView1 {
-	width: 100%;
-	height: 105%;
+	width: 100vw;
+	height: 120vh;
+	background-color: red;
 	/*border: 5px solid red;*/
 	background-image: url("../Resources/city2.jpg");
 	background-size: cover;                
@@ -124,19 +127,19 @@ html, body {
 }
 
 .mainView2 {
-	width: 100%;
-	height: 110%;
+	width: 100vw;
+	height: 120vh;
 	position: absolute;
-	top: 105%;
+	top: 120vh;
 	background-color: #283593;
 	
 }
 
 .mainView3 {
-	width: 100%;
-	height: 110%;
+	width: 100vw;
+	height: 120vh;
 	position: absolute;
-	top: 215%;
+	top: 240vh;
 	background-color: #f5f5f5;
 	background-image: url("../Resources/city.jpg");
 	background-size: cover;                
@@ -146,10 +149,10 @@ html, body {
 }
 
 .mainView4 {
-	width: 100%;
-	height: 30%;
+	width: 100vw;
+	height: 30vh;
 	position: absolute;
-	top: 325%;
+	top: 360vh;
 	background-color: #424242;
 }
 /*------------------------VIEWS END------------------------*/
