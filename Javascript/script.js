@@ -11,7 +11,8 @@ var contentDiv = document.getElementById("contentDiv");
 innerContainer2.style.visibility = "hidden";
 shadowBox.style.visibility = "hidden";
 
-
+//funktsioon, mis ootab pool sekundit ja siis tekib tervitustext ekraanile.
+setTimeout(function(){ document.getElementById("fly-in-text").classList.remove("hidden"); }, 500);
 
 
 //----------------------------------- FUNCTIONS -----------------------------------
@@ -72,3 +73,4 @@ document.addEventListener("click", function(e) {
 			break;
 	}
 });
+

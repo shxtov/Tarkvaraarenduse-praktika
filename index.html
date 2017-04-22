@@ -6,12 +6,12 @@
 	<link rel="stylesheet" type="text/css" href="CSS/styleReset.css">
 	<link rel="stylesheet" type="text/css" href="CSS/singlePageStyle.css">
 	<link rel="stylesheet" type="text/css" href="CSS/style.css">
-	
-</head>
+	</head>
 
 <body>
 	
-	
+		 
+          
 	<!-- Kogu single page content on selle main tagi sees, kõik mis väljas on, single page sisse ei lähe-->
 	<!-- div, kus on id "?view" tähistavad mingit single page osalehte-->
 	<!-- kui kasutaja tuleb lehele, siis by-default kuvatakse "1view"-->
@@ -32,6 +32,17 @@
 	
 			<!--Siia divi sisse läheb pealehel scrollides esimese vaate sisu. Siin sees on kõik, mida inimene kohe lehele tulles näeb-->
 			<div id="mainView1" class="mainView1 sect">
+				
+				<!-- animeeritud text, mis alguses kuvatakse -->
+				<ul id="fly-in-text" class="fly-in-text hidden">
+					<li>T</li>
+					<li>E</li>
+					<li>R</li>
+					<li>V</li>
+					<li>I</li>
+					<li>S</li>
+					<li>T</li>
+				</ul>
 				
 				<div id="mainContainer" class="mainContainer">
 				
@@ -85,6 +96,8 @@
 			<div id="mainView4" class="mainView4">
 				<h1 id="footer" class="randomText">FOOTER</h1>
 			</div>
+			
+		
 	
 		</div><!-- 1view lõppeb-->
 		
@@ -106,8 +119,6 @@
 		</div>
 		
 	</main>
-	
-	
 	<script type="text/javascript" src="Javascript/script.js"></script>
 	<script type="text/javascript" src="Javascript/singlePage.js"></script>
 </body>
