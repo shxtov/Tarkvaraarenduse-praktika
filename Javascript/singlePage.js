@@ -1,6 +1,6 @@
 (function() {
 	var app = {
-		// funktsioonid, mis käivituvad alati, kui hash muutub, console.log hetkel.
+		// funktsioonid, mis käivituvad alati, kui lehte refreshitakse
 		'routes': {
 			'1view': {
 				'rendered': function() {
@@ -8,15 +8,15 @@
 				}
 			},
 			'2view': {
-									'rendered': function() {
+				'rendered': function() {
 					console.log('See on teine leht');
-					}
-						},
+				}
+			},
 			'3view': {
 				'rendered': function() {
 					console.log('See on kolmas leht');
-					}
-             }
+				}
+			},
 		},
 		
 		'default': '1view',
@@ -29,7 +29,20 @@
 		// Funktsioon käivitamiseks
 		'init': function() {
 			window.addEventListener('hashchange', function() {
+				//funktsioon, mis kuulab hash´i muutust
+				switch(location.hash.slice(1)){
+					case "1view":
+						
+						break;
+					case "2view":
+						
+						break;
+					case "3view":
+						
+						break;
+				}
 			});
+			
 			// Kui seda hashi pole URL-is, siis muudab URL´i.
 			// Kaasab default view´i hash´i.
 			if (!window.location.hash) {
