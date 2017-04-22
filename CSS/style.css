@@ -27,13 +27,94 @@ html, body {
 }
 
 /*BUTTONS*/
+.blackBtn {
+	width: 200px;
+	/*-webkit-transition: all .2s;*/
+	background: #e3e3e3;
+	text-transform: uppercase;
+	text-decoration: none;
+	text-align: center;
+	font-weight: bold;
+	font-family: arial;
+	font-size: 20px;
+	letter-spacing: 2px;
+	color: #333;
+	
+	border-radius: 5px;
+	box-shadow: 0px 0px 2px rgba(0,0,0,.5),
+		1px 1px 5px rgba(0,0,0,.5);
+	cursor: pointer;
+}
+.blackBtn:hover{
+	background: #333;
+	color: #e3e3e3;
+}
+.contentButton {
+	position: absolute;
+	bottom: 50px;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	font-family: arial;
+	text-transform: uppercase;
+	text-decoration: none;
+	color: #fff;
+	background: transparent;
+	width: 300px;
+	height: 60px;
+	line-height: 60px;
+	text-align: center;
+	font-weight: bold;
+	letter-spacing: 2px;
+	z-index: 1;
+}
+.contentButton:before {
+	content: '';
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	background: #20caff;
+	opacity: .7;
+	z-index: -1;
+	mix-blend-mode: multiply;
+	transform-origin: top;
+	transition: .2s;
+	top: -3px;
+	left: -3px;
+}
+
+.contentButton:after {
+	content: '';
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	background: #ff0606;
+	opacity: .7;
+	z-index: -1;
+	mix-blend-mode: multiply;
+	transform-origin: bottom;
+	transition: .2s;
+	bottom: -3px;
+	right: -3px;
+}
+.contentButton:hover:before {
+	top: -6px;
+	left: 0;
+	transform: perspective(1000px) rotateX(80deg);
+}
+.contentButton:hover:after {
+	bottom: -6px;
+	right: 0;
+	transform: perspective(1000px) rotateX(-80deg);
+}
+.contentButton:hover{
+	color: black;
+}
 .mainBtn {
 	position: absolute;
-	width: 400px;
+	width: 300px;
 	height: 50px;
 	left: 50%;
-	margin-left: -200px;
-	margin-top: 5px;	
+	margin-left: -150px;	
 }
 
 .nextBtn1 {
@@ -51,6 +132,7 @@ html, body {
 	height: 40px;
 	left: 7px;
 }
+
 
 .btnIntro {
 	margin-top: 30px;
@@ -133,8 +215,7 @@ html, body {
 	height: 120vh;
 	position: absolute;
 	top: 120vh;
-	background-color: #283593;
-	
+	background-color: #f5f5f5;	
 }
 
 .mainView3 {
@@ -164,7 +245,7 @@ html, body {
 	width: 100%;
 	position: absolute;
 	top: 40%;
-	color: white;
+	color: #e0e0e0;
 	font-size: 150px;
 	font-family: "Lucida Console", Monaco, monospace;
 }
