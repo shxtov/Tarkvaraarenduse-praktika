@@ -4,165 +4,163 @@
     <title>Simple Map</title>
     <meta name="viewport" content="initial-scale=1.0">
     <meta charset="utf-8">
-
     <style>
-		/* Always set the map height explicitly to define the size of the div
-		* element that contains the map. */
-		/* Optional: Makes the sample page fill the window. */
 		html, body {
 			height: 100%;
 			margin: 0;
 			padding: 0;
-		}		
-	  
-	  
+		}
 		#main-wrap {
-			
 			overflow: hidden;
 		}
-
 		#controls {
 			float: left;
-			width: 30%;	
+			width: 30%;
 		}
-
-		#map {
+    /* MAP DIV peab olema ALATI 100% height */
+    #map {
 			float: right;
 			width: 70%;
 			height: 100%;
-		}   
+		}
     </style>
   </head>
 <body>
-
 <div id="map"></div>
-	<div id="controls" style="text-align: center">
-		Latitude:<br>
-		<input type="text" id="latInput" value="59.4387419"><br><br>
-		Longitude:<br>
-		<input type="text" id="lngInput" value="24.7716452"><br><br>
-		<button id="addMarkerBtn" >Add marker</button><br>
-		<button id="centerMapBtn">Center map</button><br><br>
-	</div>
-	
-<script>
-  function initMap() {
-	  var map = new google.maps.Map(document.getElementById('map'), {
-          center: {lat: 59.4387419, lng: 24.7716452},
-          zoom: 16,
-          styles: [
-            {elementType: 'geometry', stylers: [{color: '#242f3e'}]},
-            {elementType: 'labels.text.stroke', stylers: [{color: '#242f3e'}]},
-            {elementType: 'labels.text.fill', stylers: [{color: '#746855'}]},
-            {
-              featureType: 'administrative.locality',
-              elementType: 'labels.text.fill',
-              stylers: [{color: '#d59563'}]
-            },
-            {
-              featureType: 'poi',
-              elementType: 'labels.text.fill',
-              stylers: [{color: '#d59563'}]
-            },
-            {
-              featureType: 'poi.park',
-              elementType: 'geometry',
-              stylers: [{color: '#263c3f'}]
-            },
-            {
-              featureType: 'poi.park',
-              elementType: 'labels.text.fill',
-              stylers: [{color: '#6b9a76'}]
-            },
-            {
-              featureType: 'road',
-              elementType: 'geometry',
-              stylers: [{color: '#38414e'}]
-            },
-            {
-              featureType: 'road',
-              elementType: 'geometry.stroke',
-              stylers: [{color: '#212a37'}]
-            },
-            {
-              featureType: 'road',
-              elementType: 'labels.text.fill',
-              stylers: [{color: '#9ca5b3'}]
-            },
-            {
-              featureType: 'road.highway',
-              elementType: 'geometry',
-              stylers: [{color: '#746855'}]
-            },
-            {
-              featureType: 'road.highway',
-              elementType: 'geometry.stroke',
-              stylers: [{color: '#1f2835'}]
-            },
-            {
-              featureType: 'road.highway',
-              elementType: 'labels.text.fill',
-              stylers: [{color: '#f3d19c'}]
-            },
-            {
-              featureType: 'transit',
-              elementType: 'geometry',
-              stylers: [{color: '#2f3948'}]
-            },
-            {
-              featureType: 'transit.station',
-              elementType: 'labels.text.fill',
-              stylers: [{color: '#d59563'}]
-            },
-            {
-              featureType: 'water',
-              elementType: 'geometry',
-              stylers: [{color: '#17263c'}]
-            },
-            {
-              featureType: 'water',
-              elementType: 'labels.text.fill',
-              stylers: [{color: '#515c6d'}]
-            },
-            {
-              featureType: 'water',
-              elementType: 'labels.text.stroke',
-              stylers: [{color: '#17263c'}]
-            }
-          ]
-        });  
+<div id="controls" style="text-align: center">
+	Latitude:<br>
+	<input type="text" id="latInput" value="59.4387419"><br><br>
+	Longitude:<br>
+	<input type="text" id="lngInput" value="24.7716452"><br><br>
+	<button id="addMarkerBtn" >Add marker</button><br>
+	<button id="centerMapBtn">Center map</button><br><br>
+</div>
 
-    document.getElementById('addMarkerBtn').onclick = function(){
-      var lat = +document.getElementById('latInput').value;
-      var lng = +document.getElementById('lngInput').value;
-      var LatLng = {lat: lat, lng: lng};
-      console.log(LatLng);
-      //
-      var marker = new google.maps.Marker({
-        position: LatLng,
-        map: map,
-		animation: google.maps.Animation.DROP
+<script>
+/*initMap() funktsioon loob uue kaardi ja paneb selle "map" div'i sisse*/
+function initMap() {
+  var map = new google.maps.Map(document.getElementById('map'), {
+        center: {lat: 59.4387419, lng: 24.7716452},
+        zoom: 16,
+        styles: [
+          {elementType: 'geometry', stylers: [{color: '#242f3e'}]},
+          {elementType: 'labels.text.stroke', stylers: [{color: '#242f3e'}]},
+          {elementType: 'labels.text.fill', stylers: [{color: '#746855'}]},
+          {
+            featureType: 'administrative.locality',
+            elementType: 'labels.text.fill',
+            stylers: [{color: '#d59563'}]
+          },
+          {
+            featureType: 'poi',
+            elementType: 'labels.text.fill',
+            stylers: [{color: '#d59563'}]
+          },
+          {
+            featureType: 'poi.park',
+            elementType: 'geometry',
+            stylers: [{color: '#263c3f'}]
+          },
+          {
+            featureType: 'poi.park',
+            elementType: 'labels.text.fill',
+            stylers: [{color: '#6b9a76'}]
+          },
+          {
+            featureType: 'road',
+            elementType: 'geometry',
+            stylers: [{color: '#38414e'}]
+          },
+          {
+            featureType: 'road',
+            elementType: 'geometry.stroke',
+            stylers: [{color: '#212a37'}]
+          },
+          {
+            featureType: 'road',
+            elementType: 'labels.text.fill',
+            stylers: [{color: '#9ca5b3'}]
+          },
+          {
+            featureType: 'road.highway',
+            elementType: 'geometry',
+            stylers: [{color: '#746855'}]
+          },
+          {
+            featureType: 'road.highway',
+            elementType: 'geometry.stroke',
+            stylers: [{color: '#1f2835'}]
+          },
+          {
+            featureType: 'road.highway',
+            elementType: 'labels.text.fill',
+            stylers: [{color: '#f3d19c'}]
+          },
+          {
+            featureType: 'transit',
+            elementType: 'geometry',
+            stylers: [{color: '#2f3948'}]
+          },
+          {
+            featureType: 'transit.station',
+            elementType: 'labels.text.fill',
+            stylers: [{color: '#d59563'}]
+          },
+          {
+            featureType: 'water',
+            elementType: 'geometry',
+            stylers: [{color: '#17263c'}]
+          },
+          {
+            featureType: 'water',
+            elementType: 'labels.text.fill',
+            stylers: [{color: '#515c6d'}]
+          },
+          {
+            featureType: 'water',
+            elementType: 'labels.text.stroke',
+            stylers: [{color: '#17263c'}]
+          }
+        ]
       });
-	  map.panTo(LatLng);
-    }
-	
-	document.getElementById('centerMapBtn').onclick = function(){
-      var lat = +document.getElementById('latInput').value;
-      var lng = +document.getElementById('lngInput').value;
-      var LatLng = {lat: lat, lng: lng};
-      console.log(LatLng);
-      //
-	  map.panTo(LatLng);
-   
-    }
-	
+/* Selles funktsioonis võetakse lat ja lng väärtused, neid konverteeritakse õigesse
+formaati ning pannakse kaardile uue markeri */
+document.getElementById('addMarkerBtn').onclick = function(){
+  var lat = +document.getElementById('latInput').value;
+  var lng = +document.getElementById('lngInput').value;
+  var LatLng = {lat: lat, lng: lng};
+  console.log(LatLng);
+  var marker = new google.maps.Marker({
+    /* kuhu läheb marker */
+    position: LatLng,
+    /* mis kaardile */
+    map: map,
+    /* DROP animatsiooniga */
+	  animation: google.maps.Animation.DROP
+    });
+  }
+
+/* Selles funktsioonis saab naha kuidas kaardi tsentreerimine valitud
+koordinaatidel kaib */
+document.getElementById('centerMapBtn').onclick = function(){
+  var lat = +document.getElementById('latInput').value;
+  var lng = +document.getElementById('lngInput').value;
+  var LatLng = {lat: lat, lng: lng};
+  console.log(LatLng);
+  /* panTo() tsentreerib kaarti sellel markeril, voib kasutada ka marker.getPosition()*/
+	map.panTo(LatLng);
+}
+
+
+/* Selle funktsiooni abil saab paigaldada markerit double click abil */
+google.maps.event.addListener(map, 'dblclick', function(event) {
+    marker = new google.maps.Marker({position: event.latLng, map: map});
+});
 	}
-	
+
 
 
 </script>
-
-
 <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBF7gGWmBnbhqoYH2zuo6bKM-lIy6FmbWE&callback=initMap"
     async defer></script>
 </body>
