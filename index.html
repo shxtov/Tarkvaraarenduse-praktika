@@ -3,124 +3,36 @@
 <head>
 	<meta charset="utf-8">
 	<title>Hoonete hindamine</title>
-	<link rel="stylesheet" type="text/css" href="CSS/styleReset.css">
-	<link rel="stylesheet" type="text/css" href="CSS/singlePageStyle.css">
-	<link rel="stylesheet" type="text/css" href="CSS/style.css">
+	<link rel="stylesheet" type="text/css" href="styleReset.css">
+	<link rel="stylesheet" type="text/css" href="style.css">
 	</head>
 
 <body>
-	
-		 
-          
-	<!-- Kogu single page content on selle main tagi sees, kõik mis väljas on, single page sisse ei lähe-->
-	<!-- div, kus on id "?view" tähistavad mingit single page osalehte-->
-	<!-- kui kasutaja tuleb lehele, siis by-default kuvatakse "1view"-->
-	<main role="main">
-		
-		<!-- Kõik, mis on "1view" divi sees, kuvatakse kasutajale kohe alguses, kõik muu <main> tagis on hidden-->
-		<div id="1view">
-	
-			
-			<!-- menu bar ajutine-->
-			<div id="" class="langBar">
-				<span  id="estLang" class=""> Est </span>
-				<span> / </span>
-				<span id="engLang" class=""> Eng </span>
-			</div>
-			
-			
-	
-			<!--Siia divi sisse läheb pealehel scrollides esimese vaate sisu. Siin sees on kõik, mida inimene kohe lehele tulles näeb-->
-			<div id="mainView1" class="mainView1 sect">
-				
-				<!-- animeeritud text, mis alguses kuvatakse -->
-				<ul id="fly-in-text" class="fly-in-text hidden">
-					<li>T</li>
-					<li>E</li>
-					<li>R</li>
-					<li>V</li>
-					<li>I</li>
-					<li>S</li>
-					<li>T</li>
-				</ul>
-				
-				<div id="mainContainer" class="mainContainer">
-				
-					<!--Container, mida on kohe alguses lehe keskel näha-->
-					<div id="innerContainer1" class="innerContainer1">
-						
-						<h1 id="" class="welcomeText">Tere tulemast,</h1>
-						<h2 class="btnIntro" value="Siia" name="asd">Alustamiseks vajuta siia</h2>
-						<button id="mainBtn" class="mainBtn blackBtn" >Alusta</button>
-					
-					</div>
-					
-					
-					
-					<!--Container, mida on peale "Alusta" nuppu vajutamist näha-->
-					<div id="innerContainer2" class="innerContainer2">
-						
-						<!--Content div, kuhu sisse tulevad küsimused, mida kasutajalt küsida-->
-						<div id="contentDiv" class="contentDiv">
-							<p>MINGID ESIMESED KÜSIMUSED MIDA ME KASUTAJALT KÜSIME ENNE KAARDI KASUTAMIST VAADE1</p>
-						</div>
-						
-						<!-- [button] küsimuste all, millega kasutaja edasi liigub-->
-						<button id="nextBtn1" class="nextBtn1 blackBtn" >Edasi</button>
-						<button id="backBtn1" class="backBtn1 blackBtn" >Tagasi</button>
-						
-					</div>
-				
-				</div>
-				
-				
-				<!--shadow, mis ilmub ekraanile, siis kui "alusta" nuppu vajutada-->
-				<div id="shadowBox"></div>
-				
-			</div><!--main view lõppeb-->
-			
-			
-			<!--Siia divi sisse läheb pealehel scrollides teise vaate sisu-->
-			<div id="mainView2" class="mainView2 subSection">
-				<h1 class="randomText">SOME CONTENT GOES HERE</h1>
-				<a href="#3view" class="contentButton"> Content button</a>
-			</div>
-			
-			<!--Siia divi sisse läheb pealehel scrollides kolmanda vaate sisu-->
-			<div class="mainView3 sect">
-				<h1 class="randomText">SOME CONTENT GOES HERE</h1>
-				
-			</div>
-			
-			<!--Siia divi sisse läheb pealehel scrollides footeri vaate sisu-->
-			<div id="mainView4" class="mainView4">
-				<h1 id="footer" class="randomText">FOOTER</h1>
-			</div>
-			
-		
-	
-		</div><!-- 1view lõppeb-->
-		
-		<!--Kui kasutaja vastab alguse küsimustele, siis ta suunatakse siia edasi-->
-		<!--2 view sisse läheb Google Mapiga seonduv content-->
-		<div id="2view">
-			<h1>SIIA SISSE TULEB GOOGLE MAPI OSA</h1>
-			<h1>SIIA SISSE TULEB GOOGLE MAPI OSA</h1>
-			<h1>SIIA SISSE TULEB GOOGLE MAPI OSA</h1>
-			<h1>SIIA SISSE TULEB GOOGLE MAPI OSA</h1>
-		</div>
 
-		
-		<!-- 3leht, kus võiks näiteks näidata inimeste lemmik kohti vms, võib ka mitte-->
-		<div id="3view">
-			<h1>SIIA SISSE TULEB MINGI MUU CONTENT</h1>
-			<h1>SIIA SISSE TULEB MINGI MUU CONTENT</h1>
-			<h1>SIIA SISSE TULEB MINGI MUU CONTENT</h1>
-		</div>
-		
-	</main>
-	<script type="text/javascript" src="Javascript/script.js"></script>
-	<script type="text/javascript" src="Javascript/singlePage.js"></script>
+	<header id="header"></header>
+
+	<div class="background"></div>
+
+	<div class="introText">
+		<h1>SOME HEADLINE GOES HERE</h1>
+		<p>Mingi lehte tutvustav lühike kirjeldus võiks näiteks siia minna, koos tervitusega Mingi lehte tutvustav lühike kirjeldus võiks näiteks siia minna, koos tervitusega
+		Mingi lehte tutvustav lühike kirjeldus võiks näiteks siia minna, koos tervitusega
+		Mingi lehte tutvustav lühike kirjeldus võiks näiteks siia minna, koos tervitusega
+		Mingi lehte tutvustav lühike kirjeldus võiks näiteks siia minna, koos tervitusega</p>	
+	</div>
+	<input type="text" placeholder="sisesta märksõna" class="input">
+	<a class="contentButton">Vajuta siia</a>
+	
+	<img class="iphone" src="iphone.png">
+
+	<div class="contentDiv"></div>
+	<div class="secondSection"></div>
+	
+	<div class="introText2">
+		<h1>PEALKIRI </h1>
+		<p>Näiteks mingisugune iphone pilt, kus sees võiks mingi pildi slideshow või canvase peal jooksev video mängida, et kuidas meie rakendust kasutata näiteks Näiteks mingisugune iphone pilt, kus sees võiks mingi pildi slideshow või canvase peal jooksev video mängida, et kuidas meie rakendust kasutata näiteks
+		Näiteks mingisugune iphone pilt, kus sees võiks mingi pildi slideshow või canvase peal jooksev video mängida, et kuidas meie rakendust kasutata näiteks</p>	
+	</div>
 </body>
 
 </html>
